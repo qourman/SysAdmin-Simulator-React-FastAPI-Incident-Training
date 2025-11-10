@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0c101b;
+  color: #ecf3fb;
+}
+
+#root {
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1.5rem;
+  padding: 1.5rem clamp(1.5rem, 4vw, 3rem);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw, 2.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0;
+  color: #87b0ff;
+  font-size: 0.95rem;
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  min-height: 0;
+}
+
+.sidebar {
+  background: #111726;
+  border: 1px solid #1f2943;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-input label {
+  display: block;
+  font-size: 0.85rem;
+  color: #8ca0c0;
+  margin-bottom: 0.25rem;
+}
+
+.player-input input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #1f2943;
+  background: #0c101b;
+  color: #ecf3fb;
+}
+
+.mission-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+}
+
+.mission button {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  padding: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.mission button:hover {
+  border-color: #2744a6;
+}
+
+.mission--selected button {
+  border-color: #3c67ff;
+  background: rgba(60, 103, 255, 0.1);
+}
+
+.mission__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mission__header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.mission__badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(135, 176, 255, 0.2);
+  color: #87b0ff;
+}
+
+.mission__objectives {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  color: #8ca0c0;
+  font-size: 0.85rem;
+}
+
+.mission__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: #6f82a3;
+  font-size: 0.75rem;
+}
+
+.empty {
+  color: #6f82a3;
+  font-size: 0.9rem;
+}
+
+.primary,
+.secondary,
+.terminal-controls button {
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #3c67ff, #7f9bff);
+  color: #fff;
+}
+
+.primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.secondary {
+  background: transparent;
+  color: #87b0ff;
+  border-color: #1f2943;
+}
+
+.secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111726;
+  border: 1px solid #1f2943;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.hud h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.hud__player {
+  margin: 0.25rem 0 0;
+  color: #6f82a3;
+  font-size: 0.85rem;
+}
+
+.hud__stats {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #87b0ff;
+}
+
+.terminal-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+}
+
+.terminal {
+  flex: 1;
+  background: #05070f;
+  border-radius: 12px;
+  padding: 0.75rem;
+  border: 1px solid #1f2943;
+  min-height: 400px;
+}
+
+.terminal-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.terminal-controls button {
+  background: rgba(60, 103, 255, 0.2);
+  color: #87b0ff;
+  border-color: rgba(60, 103, 255, 0.4);
+}
+
+.terminal-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.feedback {
+  color: #6f82a3;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .workspace {
+    order: 1;
+  }
+}

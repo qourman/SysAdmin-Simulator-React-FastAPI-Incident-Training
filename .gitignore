@@ -1,0 +1,25 @@
+# Node / frontend artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Python virtual environments and caches
+.venv/
+backend/.venv/
+**/__pycache__/
+*.pyc
+
+# Environment files and secrets
+*.env
+*.env.*
+!backend/.env.example
+!frontend/.env.example
+
+# VS Code workspace settings (optional keep .vscode if desired)
+.vscode/
+
+# Logs and runtime files
+*.log
+
+# Mac / Windows system junk
+.DS_Store
+Thumbs.db
