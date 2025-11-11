@@ -2,6 +2,8 @@
 
 React + FastAPI training game where you play a junior systems administrator handling on-call incidents through a guided terminal experience. Built by **Aymane Qouraiche** to showcase frontend craft, backend validation, and realistic infrastructure scenarios.
 
+🚀 **[Live Demo](https://sysadmin-s.netlify.app/)**
+
 ## Features
 
 - 🎯 **Mission-driven gameplay** – tackle curated scenarios like restoring network routes or stabilising failing services.
